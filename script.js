@@ -26,7 +26,7 @@ function closeImg(){
 }
 
 function openPfp(){
-  openImg("https://xatimg.com/image/tPYW1k4NxIeg.jpg");
+  openImg("https://xatimg.com/image/P4OwFp1fvAwd.jpg");
 }
 
 
