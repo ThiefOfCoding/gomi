@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Kitty Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="outer">
+  <div class="card" id="profile">
+
+    <div class="banner"></div>
+    <img class="pfp" src="https://xatimg.com/image/tPYW1k4NxIeg.jpg" onclick="openPfp()">
+
+    <h2>Gomi <span>(2025)</span></h2>
+    <p>Zay♡</p>
+    <a href="https://xat.com/saoko" target="_blank">xat.com/saoko</a>
+    <p>La MamiChula</p>
+
+    <button onclick="openGallery()">Photos</button>
+
+    <h3>Friends</h3>
+    <div class="friends">
+      <!-- Pitu -->
+      <div onclick="openImg('https://xatimg.com/image/oNNmzdq9Wx2r.jpg')">
+        <img src="https://xatimg.com/image/oNNmzdq9Wx2r.jpg">
+        <p>Pitu</p>
+      </div>
+
+      <!-- Teki (UPDATED IMAGE) -->
+      <div onclick="openImg('https://xatimg.com/image/WYNXnQuyNV2S.jpg')">
+        <img src="https://xatimg.com/image/WYNXnQuyNV2S.jpg" class="gif-look">
+        <p>Teki</p>
+      </div>
+
+      <!-- Franco -->
+      <div onclick="openImg('https://xatimg.com/image/LzJVRLo4tlNn.gif')">
+        <img src="https://xatimg.com/image/LzJVRLo4tlNn.gif">
+        <p>Franco</p>
+      </div>
+    </div>
+
+    <div class="player" onclick="showPlayer()">
+      <img src="https://xatimg.com/image/2QBj1JB3o7sX.jpg">
+      <div>
+        <b>Cazzu</b>
+        <small>Miedo</small>
+      </div>
+      ▲
+    </div>
+  </div>
+
+  <div class="card hidden" id="player">
+    <h2>Listening Now</h2>
+    <iframe src="https://www.youtube.com/embed/nkZ93r4HdwQ?autoplay=1" allow="autoplay"></iframe>
+    <button onclick="hidePlayer()">Back</button>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="overlay" id="gallery">
+  <div class="gallery">
+    <h2>Photos</h2>
+    <div class="row">
+      <img onclick="openImg(this.src)" src="https://xatimg.com/image/NXDV8j6DaDJ8.jpg">
+      <img onclick="openImg(this.src)" src="https://xatimg.com/image/Q8FodtsTeFt2.jpg">
+      <img onclick="openImg(this.src)" src="https://xatimg.com/image/Rvm8H7SfSTMw.jpg">
+      <img onclick="openImg(this.src)" src="https://xatimg.com/image/QG88LuknaxF5.jpg">
+    </div>
+    <button onclick="closeGallery()">Close</button>
+  </div>
+</div>
+
+<!-- Viewer -->
+<div class="overlay" id="viewer" onclick="closeImg()">
+  <img id="viewImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
