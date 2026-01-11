@@ -5,10 +5,11 @@ body{
 }
 
 .outer{
-  height:100vh;
+  min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
+  padding:20px;
 }
 
 .card{
@@ -47,17 +48,35 @@ button{
   margin:10px 0;
 }
 
+/* FRIENDS SECTION FIXED */
 .friends{
   display:flex;
-  justify-content:space-around;
+  flex-wrap:wrap;
+  justify-content:space-around; /* evenly space friends */
+  gap:10px;
+  margin-top:10px;
 }
+
+.friends div{
+  text-align:center;
+  cursor:pointer;
+  flex:0 0 60px; /* fixed width to prevent layout shift */
+}
+
 .friends img{
   width:60px;
   height:60px;
   border-radius:50%;
   border:2px solid pink;
+  transition: transform 0.3s; /* smooth hover zoom */
+  will-change: transform; /* helps prevent glitches */
 }
 
+.friends img:hover{
+  transform: scale(1.1); /* subtle zoom on hover */
+}
+
+/* GIF special effect */
 .gif-look{
   animation:pulse 1s infinite alternate;
 }
@@ -74,6 +93,7 @@ button{
   justify-content:space-between;
   align-items:center;
   cursor:pointer;
+  margin-top:15px;
 }
 
 .player img{
@@ -116,7 +136,10 @@ iframe{
 .row{
   display:flex;
   gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
+
 .row img{
   width:150px;
   border-radius:10px;
